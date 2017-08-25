@@ -1,0 +1,49 @@
+.gallery {
+	margin: 1.5em 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	padding: 1em;
+
+	img {
+		display: block;
+    box-shadow: 1px 1px 3px 1.5px rgba(0,0,0,.3);
+	}
+
+	a {
+		display: inline-block;
+		border-bottom: none;
+
+		&:hover,
+		&:focus {
+			border-bottom: none;			
+
+			img {
+				box-shadow: 1px 1px 3px 3px rgba(0,0,0,.3);
+			}
+		}
+
+		img {
+			padding: .5em;
+			margin: 0 auto;			
+		}
+	}
+  
+  // Loops to enumerate the classes for gallery columns.
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} & {
+			max-width: ( 100% / $i );
+		}
+	}
+}
+
+.gallery-caption {
+	display: block;
+	margin: 0;
+	font-family: $font__sans;
+	border: none;
+}
