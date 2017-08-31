@@ -41,7 +41,7 @@ if ( ! function_exists( 'pariscores_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-    
+    add_image_size( 'pariscores-index-img', 800, 450, true);
     
 
 		// This theme uses wp_nav_menu() in one location.

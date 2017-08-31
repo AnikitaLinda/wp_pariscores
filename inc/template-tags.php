@@ -120,3 +120,21 @@ function pariscores_post_navigation() {
 			'<span class="post-title">%title</span>',
 	) );
 }
+
+/**
+ * Customize ellipsis at end of excerpts.
+ */
+
+function pariscores_excerpt_more ( $more ) {
+  return " …";
+}
+add_filter( 'excerpt_more', 'pariscores_excerpt_more' );
+
+/**
+ * Filter excerpt length to 100 words.
+ */
+
+function pariscores_excerpt_length ( $length ) {
+  return 100;  
+}
+add_filter ( 'excerpt_length', 'pariscores_excerpt_length' );

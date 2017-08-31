@@ -1,6 +1,5 @@
 .main-navigation {
-	display: block;
-	
+	display: block;	
 	font-family: $font__sans;
 	font-weight: 400;
 	clear: left;
@@ -76,6 +75,12 @@
 	}
 }
 
+.main-nav-scrolled {
+  position: fixed; 
+  top: 0;
+  width: 100%;
+}
+
 button.dropdown-toggle {
 	position: absolute;
   width: 40px;
@@ -102,17 +107,8 @@ button.dropdown-toggle {
 	text-transform: uppercase;
 	color: white;
 	border: 2px solid white;
-  background: none;
-  
-    &:hover,
-    &:active,
-    &:focus {		 
-    border: 2px solid #b94a48;
-      .icon-bar {
-      background-color: #b94a48;
-    }
+  background: none;    
   }
-}
 
 .icon-bar {
     display: block;
@@ -120,7 +116,8 @@ button.dropdown-toggle {
     height: 2px;
     background-color: white;
     border-radius: 1px;
-    margin: 4px 2px;      
+    margin: 4px 2px; 
+    z-index: 50;
 }
 
 

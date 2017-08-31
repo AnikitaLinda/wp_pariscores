@@ -31,7 +31,7 @@
   <?php
   if ( has_post_thumbnail() )  { ?>
     <figure class="featured-image centered-image">
-      <?php  the_post_thumbnail() ?>
+      <?php  the_post_thumbnail(); ?>
     </figure>
   <?php } ?>
   

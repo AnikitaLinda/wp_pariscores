@@ -34,7 +34,7 @@
 	}
 
 	initMainNavigation( $( '.main-navigation' ) );
-
+  
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.menu-toggle' );
 	siteNavContain = masthead.find( '.main-navigation' );

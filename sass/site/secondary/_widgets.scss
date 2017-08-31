@@ -6,6 +6,7 @@
 	margin: 0 0 1.5em;
 	padding: 0 0 1em;
 	font-family: $font__sans;
+  max-width: 300px;
 
 	ul,
 	ol {
@@ -128,8 +129,7 @@
 
 /* Calendar widget */
 .widget_calendar {
-	font-weight: 400;
-  max-width: 30%;
+	font-weight: 400;  
 	
 	caption {
 		padding: .5em 0;
@@ -164,7 +164,7 @@
 	}
 	
 	a {
-		font-weight: 900;
+		font-weight: 700;
     color: $color__interactive;
 		text-decoration: none;
     }	
@@ -185,7 +185,11 @@
 	background-color: $color__background-footer-widgets;
 	
 	@media screen and (min-width: $query__small) {
-		padding: 2em 1em;
+		/* Use flex to create a responsive layout */
+    padding: 2em 1em;
+    display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 	
 	.widget {
@@ -213,11 +217,7 @@
 	}
 		
 	@media screen and (min-width: $query__medium) {
-		/* Use flex to create a responsive layout */
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		
+				
 		/* If only one widget is displayed, make it full width. */
 		.widget:only-of-type {
 			width: 100%;
@@ -225,7 +225,7 @@
 
 		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
 		.widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) { 
-			flex: 2;
+			flex: 1;
 		}
 		
 		/* If 4 or more widgets are displayed, show three across when available. */
