@@ -842,7 +842,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-content {
 	padding: 3em 1em 1em;
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -1031,6 +1031,7 @@ a:hover, a:active {
 	position: relative;
 	padding: 1em;
 	font-family: "Roboto Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 70%;
 	color: #fff;
 	background-color: #002254;
 	z-index: 999;
@@ -1040,6 +1041,7 @@ a:hover, a:active {
 @media screen and (min-width: 600px) {
 	.site-header {
 		padding: 1em 2em;
+		font-size: 100%;
 	}
 }
 
@@ -1200,6 +1202,16 @@ a:hover, a:active {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	padding-top: .3em;
+	padding-bottom: .3em;
+}
+
+.main-nav-scrolled .site-branding {
+	font-size: 70%;
+}
+
+.main-nav-scrolled .custom-logo-link img {
+	height: 65px;
 }
 
 button.dropdown-toggle {
@@ -1246,7 +1258,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	display: block;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 899px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -1487,7 +1499,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	}
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
 	.no-sidebar .children {
 		margin-left: 3em;
 	}
@@ -1628,6 +1640,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	position: relative;
 	padding: 1em;
 	font-family: "Roboto Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 80%;
 	color: #fff;
 	background-color: #002254;
 	text-align: center;
@@ -1647,6 +1660,42 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	}
 }
 
+.site-footer__wrap {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+	.site-footer__wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+}
+
+.site-info {
+	margin: 1em 0 1em auto;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+}
+
+@media screen and (min-width: 900px) {
+	.site-info {
+		text-align: right;
+	}
+	.site-info span {
+		display: block;
+	}
+}
+
+.social-menu {
+	margin: 1em 0;
+}
+
 .social-menu ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1655,6 +1704,8 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	list-style-type: none;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }
@@ -1977,7 +2028,7 @@ object {
 	}
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
 	.wp-caption.aligncenter,
 	.centered-image {
 		margin: 1em 0 0;
@@ -2085,6 +2136,65 @@ object {
 	margin: 0;
 	font-family: "Roboto Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	border: none;
+}
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+/* SVG Icons base styles */
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+	display: none;
+}
+
+.no-svg .svg-fallback {
+	display: inline-block;
+}
+
+.no-svg .nav-links .svg-fallback {
+	padding: 0 .5em;
+	color: inherit;
+	background: inherit;
+}
+
+.no-svg .svg-fallback.icon-arrow-left:before {
+	content: "←";
+}
+
+.no-svg .svg-fallback.icon-arrow-right:before {
+	content: "→";
+}
+
+/* Social Menu fallbacks */
+.no-svg .social-menu a {
+	height: auto;
+	width: auto;
+}
+
+.no-svg .social-menu li a .screen-reader-text {
+	clip: auto;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	height: auto;
+	position: relative !important;
+	/* overrides previous !important styles */
+	width: auto;
 }
 
 /*# sourceMappingURL=../pariscores/sass/maps/style.css.map */

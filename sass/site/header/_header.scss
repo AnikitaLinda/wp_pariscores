@@ -12,6 +12,7 @@
 	position: relative;
 	padding: 1em;
 	font-family: $font__sans;
+  font-size: 70%;
 	color: #fff;
 	background-color: $color__skin;
   z-index: 999;
@@ -20,6 +21,7 @@
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
+    font-size: 100%;
 	}
 }
 

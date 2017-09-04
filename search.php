@@ -43,11 +43,11 @@ endif; ?>
 
 			endwhile;
 
-		   	the_posts_pagination( array(
-        'prev_text' => __('Previous', 'pariscores'),
-        'next_text' => __('Next', 'pariscores'),
-        'before_page_number' => '<span class= "screen-reader-text">' . __( 'Page ', 'pariscores' ) . '</span>',
-    ));
+		  the_posts_pagination( array(
+				'prev_text' => pariscores_get_svg( array( 'icon' => 'arrow-left', 'fallback' => true ) ) . __( '', 'pariscores' ),
+				'next_text' => __( '', 'pariscores' ) . pariscores_get_svg( array( 'icon' => 'arrow-right', 'fallback' => true  ) ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'pariscores' ) . '</span>',
+			));
 
 
 		?>

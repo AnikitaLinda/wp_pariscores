@@ -79,6 +79,14 @@
   position: fixed; 
   top: 0;
   width: 100%;
+  padding-top: .3em;
+  padding-bottom: .3em;
+    .site-branding {
+      font-size: 70%;
+     }
+     .custom-logo-link img {
+       height: 65px;
+     }
 }
 
 button.dropdown-toggle {
@@ -128,7 +136,7 @@ button.dropdown-toggle {
 	display: block;
 }
 
-@media screen and (min-width: $query__small) {
+@media screen and (min-width: 899px) {
 	.menu-toggle {
 		display: none;
 	}
