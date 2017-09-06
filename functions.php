@@ -240,8 +240,8 @@ function pariscores_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'pariscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
   
   register_sidebar( array(
@@ -250,8 +250,8 @@ function pariscores_widgets_init() {
 		'description'   => esc_html__( 'Add footer widgets here.', 'pariscores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'pariscores_widgets_init' );

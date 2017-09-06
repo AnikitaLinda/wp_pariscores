@@ -55,14 +55,14 @@
 	a:hover,
 	a:focus {
 		text-decoration: none;
-    color: #b94a48;
+    color: $color__interactive;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-   color: #b94a48;
+   color: $color__interactive;
 	}
 	
 	.menu-item-has-children,

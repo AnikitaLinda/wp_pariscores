@@ -1091,7 +1091,7 @@ a:hover, a:active {
 }
 
 .site-title a:hover, .site-title a:focus {
-	color: #b94a48;
+	color: #eb4646;
 }
 
 .site-description {
@@ -1178,14 +1178,14 @@ a:hover, a:active {
 .main-navigation a:hover,
 .main-navigation a:focus {
 	text-decoration: none;
-	color: #b94a48;
+	color: #eb4646;
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	color: #b94a48;
+	color: #eb4646;
 }
 
 .main-navigation .menu-item-has-children,
@@ -1651,7 +1651,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 }
 
 .site-footer a:hover, .site-footer a:focus {
-	color: #b94a48;
+	color: #eb4646;
 }
 
 @media screen and (min-width: 600px) {
@@ -1905,8 +1905,8 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 .footer-widgets {
 	margin: 2em 0 0;
 	padding: 1em 0;
-	background-color: #8b0000;
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+	background-color: #eb4646;
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (min-width: 600px) {
