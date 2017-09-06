@@ -40,7 +40,7 @@
 
     <div class="entry-content">
       <?php
-      $length_setting = get_theme_mod('length_setting');
+      $length_setting = get_theme_mod( 'length_setting' );
       if ( 'excerpt' === $length_setting ) {
         the_excerpt();
       } else {

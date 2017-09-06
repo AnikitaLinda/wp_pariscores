@@ -21,12 +21,17 @@ function pariscores_body_classes( $classes ) {
   // Adds a class telling us if sidebar is active
   
   if  ( is_active_sidebar( 'sidebar-1' ) ) {
+    $classes[] = 'has-page-sidebar';
+  }
+    
+ // Adds a class telling us if page sidebar is active
+  
+  if  ( is_active_sidebar( 'sidebar-2' ) ) {
     $classes[] = 'has-sidebar';
    } else {
      $classes[] = 'no-sidebar';
    }
-    
-    
+       
             
   
 
