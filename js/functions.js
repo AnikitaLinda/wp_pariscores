@@ -35,5 +35,6 @@ $(window).bind('scroll', function() {
 	if ( true === supportsInlineSVG() ) {
 		document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );
 	}
+  
 })(jQuery);
 

@@ -8,11 +8,11 @@
   }
 }
 
-.site-header {
+.site-header {	 
 	position: relative;
-	padding: 1em;
-	font-family: $font__sans;
-  font-size: 70%;
+  padding: 1em;
+  height: 110px;
+	font-family: $font__sans;  
 	color: #fff;
 	background-color: $color__skin;
   z-index: 999;
@@ -20,15 +20,21 @@
   
 	
 	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
-    font-size: 100%;
+		padding: 1em 2em;    
 	}
 }
 
 .site-branding {
+  position: relative;
   display: flex;
+  margin-left: -1em;
 	min-height: 75px;
   flex: 1 0 auto;
+  font-size: 75%;
+    
+    @media screen and (min-width: $query__small) {
+      font-size: 100%;
+    }
 }
 
 .custom-logo-link {
@@ -45,7 +51,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 75px;
+  height: 75px;    
 }
 
 .site-title {
@@ -75,14 +81,15 @@
   .site-header {
     display: flex;
     justify-content: space-between;
+    
   }
   
   .site-branding  {
-    width: 45%;
+    width: 40%;
   }
   
   .main-navigation {
-    width: 55%;
+    width: 60%;
   }    
 }
 

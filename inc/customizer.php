@@ -287,7 +287,8 @@ if ( ! function_exists( 'pariscores_header_style' ) ) :
       .comment-awaiting-moderation,
       .site-footer a:hover, .site-footer a:focus,
       .widget_calendar a,
-      .cat-links a {
+      .cat-links a,
+      button.dropdown-toggle {
 				color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 			

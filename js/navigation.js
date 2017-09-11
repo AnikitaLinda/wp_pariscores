@@ -12,7 +12,7 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( $( '<span />', { 'class': 'dropdown-symbol', text:'+' }) )
+			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '\u2B9F' }) )
 			.append( $( '<span />', { 'class': 'screen-reader-text', text: pariscoresScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
@@ -21,13 +21,14 @@
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
         dropdownSymbol = _this.find('.dropdown-symbol');
-        dropdownSymbol.text(dropdownSymbol.text() === '-' ? '+' : '-');
+        dropdownSymbol.text(dropdownSymbol.text() === '\u2B9D' ? '\u2B9F' : '\u2B9D');
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+              
 
 			screenReaderSpan.text( screenReaderSpan.text() === pariscoresScreenReaderText.expand ? pariscoresScreenReaderText.collapse : pariscoresScreenReaderText.expand );
 		});
@@ -57,6 +58,10 @@
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});
 	})();
+  
+   $('.menu-toggle').on('click', function() {
+  this.classList.toggle('active');
+});
 
 	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
 	(function() {
@@ -99,4 +104,5 @@
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
+
 })( jQuery );

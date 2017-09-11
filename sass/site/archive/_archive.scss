@@ -5,6 +5,7 @@
     .page {
       position: relative;
       background: #fff;
+      box-shadow: 12px 12px 20px 0 rgba(46,61,73,.15);
     }
     
     .post__content {
@@ -69,17 +70,15 @@
 }
 
 .sticky::before {
-    content: "";
-    display: block;
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    border-width: 0 3em 3em 0;
-    border-color: #eee #eee white;
-    border-style: solid;
-    box-shadow: -1px 2px 2px hsla(0, 0%, 10%, .1);
+  content: "Featured";
+  display: inline-block; 
+  position: absolute;
+  top: 0px;
+  float: right;
+  color: #fff;
+  background: $color__interactive;
+  padding: 1px 5px;   
+  text-transform: uppercase;
 }
 
 .index-image {
