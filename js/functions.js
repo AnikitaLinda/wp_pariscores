@@ -23,8 +23,29 @@ $(window).bind('scroll', function() {
 });
 
 /*
+	 * Manage top button
+	 * 
+	 */
+$(document).ready(function($){
+    var offset = 200;
+    var speed = 500;
+    var duration = 500;
+	   $(window).scroll(function(){
+            if ($(this).scrollTop() < offset) {
+			     $('.topbutton') .fadeOut(duration);
+            } else {
+			     $('.topbutton') .fadeIn(duration);
+            }
+        });
+	$('.topbutton').on('click', function(){
+		$('html, body').animate({scrollTop:0}, speed);
+		return false;
+		});
+});
+/*
 	 * Test if inline SVGs are supported.
 	 * @link https://github.com/Modernizr/Modernizr/
+   * 
 	 */
 	function supportsInlineSVG() {
 		var div = document.createElement( 'div' );

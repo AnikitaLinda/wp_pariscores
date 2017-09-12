@@ -872,11 +872,17 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content {
-		width: 65%;
+		width: 70%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
 		width: 25%;
+	}
+	.single.has-sidebar .hentry .entry-content,
+	.page .hentry .entry-content {
+		background: #eee;
+		box-shadow: 12px 12px 20px 0 rgba(46, 61, 73, 0.15);
+		padding: 2em 1.5em;
 	}
 	.page.has-page-sidebar .hentry {
 		-webkit-box-orient: horizontal;
@@ -918,7 +924,7 @@ a:hover, a:active {
 }
 
 .archive-view .post__content {
-	padding: 2em 2em 3em;
+	padding: 1.5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -932,6 +938,10 @@ a:hover, a:active {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
+	.archive-view.has-sidebar .post,
+	.archive-view.has-sidebar .page {
+		margin-right: 1em;
+	}
 	.archive-view.has-sidebar .page-header {
 		width: 100%;
 		-webkit-box-flex: 1;
@@ -939,7 +949,7 @@ a:hover, a:active {
 		        flex: 1 0 100 .archive-view.has-sidebar .page-header;
 	}
 	.archive-view.has-sidebar .content-area {
-		width: 65%;
+		width: 70%;
 	}
 	.archive-view.has-sidebar #secondary {
 		width: 25%;
@@ -989,8 +999,9 @@ a:hover, a:active {
 	float: right;
 	color: #fff;
 	background: #eb4646;
-	padding: 1px 5px;
+	padding: 1px 6px;
 	text-transform: uppercase;
+	font-style: italic;
 }
 
 .index-image img {
@@ -1814,6 +1825,42 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	padding: .5em 1em;
 }
 
+.topbutton {
+	display: none;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	z-index: 999;
+	right: 15px;
+	bottom: 20px;
+	color: #fff;
+	text-align: center;
+	background: #eb4646;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	transition: all 0.2s ease-in-out 0s;
+	outline: 0;
+}
+
+.topbutton svg {
+	top: 4px;
+}
+
+.topbutton:hover, .topbutton:focus {
+	background: #002254;
+	color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+	.topbutton {
+		width: 50px;
+		height: 50px;
+	}
+	.topbutton svg {
+		top: 8px;
+	}
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -2177,6 +2224,7 @@ object {
 
 .gallery-item img {
 	display: block;
+	background: #fff;
 	box-shadow: 1px 1px 3px 1.5px rgba(0, 0, 0, 0.3);
 }
 
@@ -2277,6 +2325,20 @@ SVG Fallbacks
 
 .no-svg .svg-fallback.icon-arrow-right:before {
 	content: "→";
+}
+
+.no-svg .svg-fallback.icon-arrow-up:before {
+	content: "⇑";
+	position: absolute;
+	top: 7px;
+	right: 12px;
+}
+
+@media screen and (min-width: 600px) {
+	.no-svg .svg-fallback.icon-arrow-up:before {
+		top: 10px;
+		right: 15px;
+	}
 }
 
 /* Social Menu fallbacks */

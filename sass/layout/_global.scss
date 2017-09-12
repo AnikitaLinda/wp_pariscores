@@ -30,6 +30,12 @@
       .widget-area {
         width: $size__ratio-small;
       }
+      
+      .entry-content {
+        background: $color__background-pre;
+        box-shadow: 12px 12px 20px 0 rgba(46,61,73,.15);
+        padding: 2em 1.5em;
+      }
     }
   }
   

@@ -14,6 +14,10 @@
 	</div><!-- #content -->
   
   <?php get_sidebar( 'footer' ); ?>
+  
+  <a href="#" class="topbutton">
+    <?php echo pariscores_get_svg( array( 'icon' => 'arrow-up', 'fallback' => true  ) ); ?>
+  </a>
 
 	<footer id="colophon" class="site-footer">
     <div class="site-footer__wrap">
