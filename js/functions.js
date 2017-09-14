@@ -26,7 +26,7 @@ $(window).bind('scroll', function() {
 	 * Manage top button
 	 * 
 	 */
-$(document).ready(function($){
+$(document).ready(function(){
     var offset = 200;
     var speed = 500;
     var duration = 500;
@@ -37,11 +37,15 @@ $(document).ready(function($){
 			     $('.topbutton') .fadeIn(duration);
             }
         });
-	$('.topbutton').on('click', function(){
+	$('.topbutton').on('click', function(){    
 		$('html, body').animate({scrollTop:0}, speed);
 		return false;
 		});
+   
 });
+
+
+
 /*
 	 * Test if inline SVGs are supported.
 	 * @link https://github.com/Modernizr/Modernizr/

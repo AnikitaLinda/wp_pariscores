@@ -82,9 +82,11 @@ if ( ! function_exists( 'pariscores_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+    
     // Add editor styles
     add_editor_style( 'inc/editor-styles.css', pariscores_fonts_url() );
 	}
+  
 endif;
 add_action( 'after_setup_theme', 'pariscores_setup' );
 

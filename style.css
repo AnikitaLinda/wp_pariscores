@@ -4,12 +4,13 @@ Theme Name: Pariscores
 Theme URI: https://github.com/AnikitaLinda/pariscores_wp
 Author: Anika Weltermann
 Author URI: http://passion-to-code.com/
-Description: A brandnew theme for a new time. This theme showcases the best of Wordpress and Underscores and is the project for a Building Themes from Scratch course.
+Description: A brandnew and elegant blog theme. This theme showcases the best of Wordpress, based on the Underscores starter theme and was the project for a Building Themes from Scratch course. It is highly customizable, fully responsive, accessible and cross browser compatible. It includes nice UX features like a sticky nav-bar, a dynamic to-top-button as well as an animated mobile menu toggle button. It also supports SVG icons including fallbacks for old browsers.
+
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pariscores
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, SVG, sticky-header, user-friendly, responsive-design
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -267,8 +268,8 @@ optgroup,
 textarea {
 	color: #666;
 	font-family: "Roboto Condensed", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 	line-height: 1.5;
 }
 
@@ -279,8 +280,8 @@ textarea {
 	select,
 	optgroup,
 	textarea {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
@@ -393,7 +394,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #fff7d1;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -495,7 +496,7 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc;
 	border-radius: 3px;
-	background: transparent;
+	background: #d9d9d9;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1;
@@ -662,7 +663,7 @@ a:hover, a:active {
 .post-navigation a:focus,
 .paging-navigation a:hover,
 .paging-navigation a:focus {
-	color: white;
+	color: #fff;
 	border-color: #eb4646;
 	background: #eb4646;
 }
@@ -678,6 +679,7 @@ a:hover, a:active {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	background: #fff;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
@@ -841,7 +843,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-content {
 	padding: 3em 1em 1em;
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
 
@@ -849,6 +851,13 @@ a:hover, a:active {
 	.site-content {
 		padding: 3em 2em 2em;
 	}
+}
+
+.single.has-sidebar .entry-content,
+.page .entry-content {
+	background: #fff;
+	box-shadow: 12px 12px 20px 0 rgba(46, 61, 73, 0.15);
+	padding: 2em 1.5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -880,8 +889,6 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .entry-content,
 	.page .hentry .entry-content {
-		background: #eee;
-		box-shadow: 12px 12px 20px 0 rgba(46, 61, 73, 0.15);
 		padding: 2em 1.5em;
 	}
 	.page.has-page-sidebar .hentry {
@@ -912,10 +919,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Archive
 --------------------------------------------------------------*/
-.archive-view {
-	background-color: #eee;
-}
-
 .archive-view .post,
 .archive-view .page {
 	position: relative;
@@ -945,8 +948,8 @@ a:hover, a:active {
 	.archive-view.has-sidebar .page-header {
 		width: 100%;
 		-webkit-box-flex: 1;
-		    -ms-flex: 1 0 100 .archive-view.has-sidebar .page-header;
-		        flex: 1 0 100 .archive-view.has-sidebar .page-header;
+		    -ms-flex: 1 0 100%;
+		        flex: 1 0 100%;
 	}
 	.archive-view.has-sidebar .content-area {
 		width: 70%;
@@ -1324,7 +1327,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 .menu-toggle span::after {
 	cursor: pointer;
 	border-radius: 1px;
-	height: 5px;
+	height: 4px;
 	width: 35px;
 	background: #fff;
 	position: absolute;
@@ -1385,6 +1388,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 		        flex-direction: column;
 		margin-left: 0;
 		margin-top: 35px;
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 	}
 	.main-navigation ul ul li {
 		padding-left: 0;
@@ -1402,6 +1406,13 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	}
 	.main-navigation ul li a {
 		padding: .4em 1em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#primary-menu {
+		max-height: 80vh;
+		overflow-y: scroll;
 	}
 }
 
@@ -1609,7 +1620,7 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
 	.no-sidebar .children {
 		margin-left: 3em;
 	}
@@ -1847,8 +1858,48 @@ button.dropdown-toggle:hover, button.dropdown-toggle:active, button.dropdown-tog
 }
 
 .topbutton:hover, .topbutton:focus {
-	background: #002254;
 	color: #fff;
+}
+
+.topbutton:hover svg, .topbutton:focus svg {
+	-webkit-animation: arrow-up 1.5s infinite;
+	        animation: arrow-up 1.5s infinite;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+}
+
+.topbutton:visited {
+	color: #fff;
+}
+
+@-webkit-keyframes arrow-up {
+	0% {
+		top: 4px;
+	}
+	25% {
+		top: 1px;
+	}
+	75% {
+		top: 9px;
+	}
+	100% {
+		top: 4px;
+	}
+}
+
+@keyframes arrow-up {
+	0% {
+		top: 4px;
+	}
+	25% {
+		top: 1px;
+	}
+	75% {
+		top: 9px;
+	}
+	100% {
+		top: 4px;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -2174,7 +2225,7 @@ object {
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
 	.wp-caption.aligncenter,
 	.centered-image {
 		margin: 1em 0 0;

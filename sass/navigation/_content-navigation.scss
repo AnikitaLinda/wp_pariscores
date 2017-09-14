@@ -2,7 +2,7 @@
 .posts-navigation,
 .post-navigation,
 .paging-navigation {
-	padding: 1em 0;
+  padding: 1em 0;
 	font-family: $font__sans;
 	text-align: left;
 	overflow: hidden;
@@ -16,7 +16,7 @@
 
 		&:hover,
 		&:focus {
-			color: white;
+			color: #fff;
 			border-color: $color__interactive;
 			background: $color__interactive;
 		}
@@ -25,7 +25,7 @@
 }
 
 .nav-links {
-	margin: 0 auto;
+  margin: 0 auto;
 	padding: 0;
 }
 
@@ -33,6 +33,7 @@
 		.nav-next {
 			float: left;
 			display: flex;
+      background: #fff;
 			justify-content: space-between;
       width: 48%;
 		}

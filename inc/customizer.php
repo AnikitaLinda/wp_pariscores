@@ -41,7 +41,7 @@ function pariscores_customize_register( $wp_customize ) {
   
   // Setting for footer widgets background color
   $wp_customize->add_setting( 'footer_widgets_bg_color', array(
-      'default' => '#8b0000',
+      'default' => '#eb4646',
       'transport' => 'postMessage',
       'type' => 'theme_mod',
       'sanitize_callback' => 'sanitize_hex_color',
@@ -239,7 +239,9 @@ if ( ! function_exists( 'pariscores_header_style' ) ) :
       
       <style type="text/css">
         .site-header,
-        .site-footer {
+        .site-footer,
+        .main-navigation,
+        .main-navigation ul ul {
           background-color: <?php echo esc_attr( $header_bg_color ); ?>;
         }
       </style>
@@ -348,7 +350,18 @@ if ( ! function_exists( 'pariscores_header_style' ) ) :
       .read-more a:focus, .read-more a:hover,
       .reply a:hover, .reply a:focus,
       .comment-form .form-submit input:hover,
-      .comment-form .form-submit input:focus {
+      .comment-form .form-submit input:focus,
+      .sticky:before,
+      .menu-toggle:hover span,
+      .menu-toggle:hover span::before,
+      .menu-toggle:hover span::after,
+      .menu-toggle:active span,
+      .menu-toggle:active span::before,
+      .menu-toggle:active span::after,
+      .menu-toggle:focus span,
+      .menu-toggle:focus span::before,
+      .menu-toggle:focus span::after,
+      .topbutton {
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 			

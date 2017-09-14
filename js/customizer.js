@@ -52,7 +52,7 @@
   // Background color for header and footer.
 	wp.customize( 'theme_bg_color', function( value ) {
 		value.bind( function( to ) {
-		$( '.site-header, .site-footer' ).css( {
+		$( '.site-header, .site-footer, .main-navigation, .main-navigation ul ul' ).css( {
 					'background-color': to
 			} );
 		} );
@@ -76,7 +76,7 @@
 			$( 'button:hover,button:active,button:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.page-content a,.entry-content a,.entry-summary a,.comment-content a,.edit-link a:hover,.edit-link a:focus,.comment-navigation a:hover,.comment-navigation a:focus,.posts-navigation a:hover,.posts-navigation a:focus,.post-navigation a:hover,.post-navigation a:focus,.paging-navigation a:hover,.paging-navigation a:focus,.post-navigation .post-title,.reply a:hover,.reply a:focus,.bypostauthor .avatar,.comment-form .form-submit input:hover,.comment-form .form-submit input:focus' ).css( {
 				'border-color': to
 			} );
-			$( 'button:hover, button:active, button:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.edit-link a:hover, .edit-link a:focus,.comment-navigation a:hover,.comment-navigation a:focus,.posts-navigation a:hover,.posts-navigation a:focus,.post-navigation a:hover,.post-navigation a:focus,.paging-navigation a:hover,.paging-navigation a:focus,.pagination a:focus,.pagination a:hover,.search .page-content,.error-404 .page-content,.read-more a:focus, .read-more a:hover,.reply a:hover, .reply a:focus,.comment-form .form-submit input:hover,.comment-form .form-submit input:focus' ).css( {
+			$( 'button:hover, button:active, button:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.edit-link a:hover, .edit-link a:focus,.comment-navigation a:hover,.comment-navigation a:focus,.posts-navigation a:hover,.posts-navigation a:focus,.post-navigation a:hover,.post-navigation a:focus,.paging-navigation a:hover,.paging-navigation a:focus,.pagination a:focus,.pagination a:hover,.search .page-content,.error-404 .page-content,.read-more a:focus, .read-more a:hover,.reply a:hover, .reply a:focus,.comment-form .form-submit input:hover,.comment-form .form-submit input:focus, .sticky:before,.menu-toggle:hover span,.menu-toggle:hover span::before,.menu-toggle:hover span::after, .menu-toggle:active span,.menu-toggle:active span::before,.menu-toggle:active span::after, .menu-toggle:focus span,.menu-toggle:focus span::before,.menu-toggle:focus span::after,.topbutton' ).css( {
 				'background-color': to
 			} );
 		} );

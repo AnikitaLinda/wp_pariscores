@@ -63,7 +63,7 @@
 }
 
 .topbutton {
-  display: none;
+  display: none; 
   width: 40px;
   height: 40px;
   position: fixed;
@@ -83,9 +83,25 @@
     }
   
     &:hover,
-      &:focus {
-      background: $color__skin;
-      color: #fff;
+      &:focus {      
+        color: #fff;
+        svg {
+          animation: arrow-up 1.5s infinite;
+          animation-timing-function: linear;
+      }
+    }
+    
+    &:visited {
+        color: #fff;
+    }
+     
+    
+    @keyframes arrow-up {
+    0% {top: 4px;}
+    25% {top: 1px;}
+    75% {top: 9px;}
+    100% {top: 4px;}
+    
     }
  
   @media screen and (min-width: $query__small) {
