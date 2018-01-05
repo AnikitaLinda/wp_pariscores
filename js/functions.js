@@ -27,11 +27,11 @@ $(window).bind('scroll', function() {
 	 * 
 	 */
 $(document).ready(function(){
-    var offset = 200;
+    var show = 200;
     var speed = 500;
     var duration = 500;
 	   $(window).scroll(function(){
-            if ($(this).scrollTop() < offset) {
+            if ($(this).scrollTop() < show) {
 			     $('.topbutton') .fadeOut(duration);
             } else {
 			     $('.topbutton') .fadeIn(duration);
@@ -41,9 +41,7 @@ $(document).ready(function(){
 		$('html, body').animate({scrollTop:0}, speed);
 		return false;
 		});
-   
-});
-
+  }); 
 
 
 /*

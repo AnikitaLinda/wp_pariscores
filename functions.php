@@ -326,3 +326,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Load SVG icon functions.
  */
 require get_template_directory() . '/inc/icon-functions.php';
+
+function custom_excerpt_length( $length ) {
+	return 50;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
